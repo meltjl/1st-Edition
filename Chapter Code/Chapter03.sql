@@ -22,6 +22,8 @@
 // Confirm your role is set to SYSADMIN
 USE ROLE SYSADMIN;
 USE WAREHOUSE COMPUTE_WH;
+CREATE OR REPLACE DATABASE DEMO3A_DB
+Comment = 'Permanent Database for Chapter 3 Exercises';
 CREATE OR REPLACE TRANSIENT DATABASE DEMO3B_DB
 Comment = 'Transient Database for Chapter 3 Exercises';
 
@@ -34,6 +36,7 @@ Comment = 'Transient Database for Chapter 3 Exercises';
 // Change role to ACCOUNTADMIN via the drop-down menu on the right
 // Be sure to notice the retention time for each database
 USE ROLE ACCOUNTADMIN;
+
 SHOW DATABASES;
 
 // Page 60 - Change the data retention time for a permanent database
@@ -62,6 +65,7 @@ SHOW TABLES;
 USE ROLE SYSADMIN; USE DATABASE DEMO3A_DB;
 CREATE OR REPLACE SCHEMA BANKING;
 
+show schemas;
 // Page 64 - Example 2 of how to create a new schema using fully qualifed name
 USE ROLE SYSADMIN;
 CREATE OR REPLACE SCHEMA DEMO3A_DB.BANKING;
